@@ -98,7 +98,7 @@ if(Qindex<questions.length)
         }
       }>
         <h2>Do you want to Restart?</h2>
-        <button onClick={reset}>Yes</button>
+        <button  onClick={reset}>Yes</button>
         <button  onClick={()=>setIsOpen(false)}>No</button>
       </Modal>
 
