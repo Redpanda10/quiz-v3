@@ -97,15 +97,17 @@ if(Qindex<questions.length)
           }
         }
       }>
-        <h2>Do you want to Restart?</h2>
+        <div className="starting">
+        <h1>Do you want to Restart?</h1>
         <button  onClick={reset}>Yes</button>
-        <button  onClick={()=>setIsOpen(false)}>No</button>
+        <button  onClick={()=>setIsOpen(false)}>No</button></div>
+        
       </Modal>
 
     <button className="left" onClick={jumpnext}>Next</button>
     <button className="right" onClick={()=>setIsOpen(true)}>Restart</button>
     </footer>
-    <ToastContainer />
+    <ToastContainer  stacked/>
   </div>
   </>)}
   else {
@@ -143,9 +145,12 @@ if(Qindex<questions.length)
           }
         }
       }>
-        <h2 style={{display:'flex'}}>Do you want to Restart?</h2>
-        <button style={{ marginleft:'10px',marginRight:'10px'}} onClick={reset}>Yes</button>
+        <div className="starting">
+        <h1>Do you want to Restart?</h1>
+        <button  onClick={reset}>Yes</button>
         <button  onClick={()=>setcheck(false)}>No</button>
+        </div>
+        
       </Modal><div className="starting">Quiz Finished!!! Your Score is {score}/{questions.length}</div>
       <button className="main-btn" onClick={()=>setIsOpen(true)}>OK</button></>
     )
